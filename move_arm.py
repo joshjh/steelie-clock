@@ -11,6 +11,7 @@ def init_servos(address):
     pwm.output_enable()
 
     # cycle the arms on channels 0, 2, 4
+    print('cycling through all valid positions')
     for x in (175, 300, 425, 550):
         pwm.set_pwm(0, 0, x)
         sleep(1)
